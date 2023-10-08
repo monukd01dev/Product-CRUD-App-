@@ -25,10 +25,10 @@ public class ProductDao {
     @Autowired
     private HibernateTemplate hibernateTemplate;
 
-    //create(createProduct)
+    //create(createProduct)orUpdate
     @Transactional
     public void createProduct(Product product) {
-        this.hibernateTemplate.save(product);
+        this.hibernateTemplate.saveOrUpdate(product);
     }
 
     //get(read)
