@@ -36,6 +36,14 @@ The Product CRUD App is a Spring MVC web application designed to help you effici
     <li>Build the project using Maven.</li>
 </ol>
 
+## Technologies Used
+- Java
+- Hibernate ORM
+- Spring MVC
+- HTML CSS
+- Bootstrap
+- JSP
+- SQL
     
 ## Features
 - C: Add new products.
@@ -43,3 +51,20 @@ The Product CRUD App is a Spring MVC web application designed to help you effici
 - U: Update existing products.
 - D: Delete products.
 
+## Usage
+1. Launch the application on a Tomcat Server.
+2. Navigate to the Home view to manage products.
+3. Click on "Update" or "Delete" buttons to perform actions on products.
+4. Use the "Add Product" button to add new products.
+
+## Contributing
+If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Create a pull request.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
