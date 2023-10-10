@@ -71,6 +71,15 @@ public class MainController {
         model.addAttribute("title","Update Product");
         return "updateForm";
     }
+    @RequestMapping("/delete-ask/{productId}")
+    public String delteAsk(@PathVariable("productId") long productId, Model model) {
+        Product product = services.getProduct(productId);
+        model.addAttribute("product", product);
+        model.addAttribute("title","Delete Product");
+        return "delete";
+    }
+
+
 
 
 }

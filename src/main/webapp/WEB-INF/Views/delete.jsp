@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: monuk
-  Date: 08-10-2023
-  Time: 05:47
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -34,7 +27,7 @@
             color: white;
             font-size: 1.5rem;
         }
-        .my-input,.my-input:focus{
+        .my-input,.my-input:focus,.my-input[readonly]{
             background: rgba( 255, 255, 255, 0.10 );
             box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
             backdrop-filter: blur( 2px );
@@ -74,34 +67,32 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 offset-md-3 form-con">
-            <h1 style="text-align: center; color: white;">Update Product</h1>
+            <h1 style="text-align: center; color: white;">Delete Product</h1>
             <form action="${pageContext.request.contextPath}/handle-product" method="post">
                 <input type="text" name="id" value="${product.id}" style="display: none">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control my-input" id="name" name="name" value="${product.name}" placeholder="Product Name" required>
+                    <input type="text" class="form-control my-input" id="name" name="name" value="${product.name}" placeholder="Product Name" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" class="form-control my-input" id="price" value="${product.price}" name="price" placeholder="Price" required>
+                    <input type="text" class="form-control my-input" id="price" value="${product.price}" name="price" placeholder="Price" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control my-input" id="description"  name="description" rows="4" placeholder="Share standout features, benefits, and qualities" required>${product.description}</textarea>
+                    <textarea class="form-control my-input" id="description"  name="description" rows="4" placeholder="Share standout features, benefits, and qualities" readonly>${product.description}</textarea>
                 </div>
-
-                <div class="form-row mgt">
-                    <div class="col">
-                        <a href="${pageContext.request.contextPath}/" style="text-decoration: none"><button type="button" class="btn btn-danger btn-lg btn-block">Back</button></a>
-                    </div>
-                    <div class="col">
-                        <button type="submit" class="btn btn-success btn-lg btn-block">Update</button>
-                    </div>
-                </div>
-
             </form>
+            <div class="form-row mgt">
+                <div class="col">
+                    <a href="${pageContext.request.contextPath}/" style="text-decoration: none"><button type="button" class="btn btn-danger btn-lg btn-block">Back</button></a>
+                </div>
+                <div class="col">
+                    <a href="${pageContext.request.contextPath}/delete/${product.id}" style="text-decoration: none"><button type="button" class="btn btn-success btn-lg btn-block">Delete</button></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

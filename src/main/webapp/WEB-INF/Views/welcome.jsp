@@ -126,7 +126,7 @@
                             <td>${p.description}</td>
                             <td class="font-weight-bold">&#x20b9; ${p.price}</td>
                             <td class="myflex">
-                                <a href="delete/${p.id}"><i class="fa-solid fa-trash fa-xl red"></i></a>
+                                <a href="delete-ask/${p.id}"><i class="fa-solid fa-trash fa-xl red"></i></a>
                                 <a href="update/${p.id}"><i class="fa-solid fa-pen-to-square fa-xl green" ></i></a>
                             </td>
                         </tr>

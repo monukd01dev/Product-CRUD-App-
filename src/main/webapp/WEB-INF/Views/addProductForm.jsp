@@ -78,17 +78,17 @@
                 <form action="handle-product" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control my-input" id="name" name="name" placeholder="Product Name">
+                        <input type="text" class="form-control my-input" id="name" name="name" placeholder="Product Name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="price">Price</label>
-                        <input type="text" class="form-control my-input" id="price" name="price" placeholder="Price">
+                        <input type="text" class="form-control my-input" id="price" name="price" placeholder="Price" required>
                     </div>
 
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea class="form-control my-input" id="description" name="description" rows="4" placeholder="Share standout features, benefits, and qualities"></textarea>
+                        <textarea class="form-control my-input" id="description" name="description" rows="4" placeholder="Share standout features, benefits, and qualities" required></textarea>
                     </div>
 
                     <div class="form-row mgt">
